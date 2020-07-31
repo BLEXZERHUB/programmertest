@@ -31,7 +31,7 @@
             // alert('sss')
             $('#btn_search').click(function() {
                 // alert('s')
-                let txt_list = $('#txt_list').val();
+                let txt_list =  $('#txt_list').val()s;
                 let txt_search = $('#txt_search').val();
                 let algor = $('#algor').val();
                 // alert(algor)
@@ -43,9 +43,17 @@
                 //     // console.log(data)
                 //     alert(data)
                 // })
+                let res
                 let splitArr = txt_list.split(",");
                 // alert(splitArr)
-                console.log(linearSearch(splitArr, txt_search))
+                if(algor == 1){
+                    res = linearSearch(splitArr, txt_search)
+                }else if(algor == 2){
+                    var sortedsplitArr = splitArr.sort(); 
+                    console.log(sortedsplitArr)
+                }
+                // console.log(linearSearch(splitArr, txt_search))
+                console.log(res)
             });
 
         });
